@@ -12,8 +12,8 @@ describe 'airbender PORO' do
 
     expect(airbender.name).to eq(airbender_data[:name])
     expect(airbender.image).to eq(airbender_data[:image])
-    expect(airbender.allies).to eq(airbender_data[:allies])
-    expect(airbender.enemies).to eq(airbender_data[:enemies])
+    expect(airbender.allies).to eq(airbender_data[:allies].join(', '))
+    expect(airbender.enemies).to eq(airbender_data[:enemies].join(', '))
     expect(airbender.affiliation).to eq(airbender_data[:affiliation])
   end
 end

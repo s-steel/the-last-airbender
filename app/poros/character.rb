@@ -7,10 +7,8 @@ class Character
   def initialize(data)
     @name = data[:name]
     @image = data[:photoUrl]
-    @allies = data[:allies]
-    @enemies = data[:enemies]
+    @allies = data[:allies].join(', ')
+    @enemies = data[:enemies].join(', ')
     @affiliation = data[:affiliation]
   end
-  # need to change this so allies and enemies are not displayed as arrays on the view
-  # could create two method here to change the data type of these attributes
 end

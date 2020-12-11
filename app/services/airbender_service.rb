@@ -7,9 +7,9 @@ class AirbenderService
     parse_it(nation_response)
   end
 
-  private 
+  private
 
-  def self.conn 
+  def self.conn
     Faraday.new('https://last-airbender-api.herokuapp.com')
   end
 
@@ -17,5 +17,3 @@ class AirbenderService
     JSON.parse(data.body, symbolize_names: true)
   end
 end
-
-# 'api/v1/characters/?affiliation=nation'
