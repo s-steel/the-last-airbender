@@ -1,2 +1,11 @@
 <h1>There are <%= @characters.length %> members of the <%= @nation %></h1>
 
+<% @characters.each do |character| %>
+  <div class='member'>
+    <p class='name'>Name: <%= character.name %></p>
+    <img class='image' src="<%= character.image %>" alt="No Image">
+    <p class='allies'>Allies: <%= character.allies %></p>
+    <p class='enemies'>Enemies: <%= character.enemies %></p>
+    <p class='affiliation'>Affiliation: <%= character.affiliation %></p>
+  </div>
+  <% end %>

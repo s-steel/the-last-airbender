@@ -2,10 +2,11 @@ class Character
    attr_reader :name,
                :allies,
                :enemies,
-               :affiation
+               :affiliation,
+               :image
   def initialize(data)
     @name = data[:name]
-    @image = data[:photoUrl] ? data[:photoUrl] : "No Photo"
+    @image = data[:photoUrl]
     @allies = data[:allies]
     @enemies = data[:enemies]
     @affiliation = data[:affiliation]
