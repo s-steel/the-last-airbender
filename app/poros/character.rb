@@ -11,4 +11,6 @@ class Character
     @enemies = data[:enemies]
     @affiliation = data[:affiliation]
   end
+  # need to change this so allies and enemies are not displayed as arrays on the view
+  # could create two method here to change the data type of these attributes
 end

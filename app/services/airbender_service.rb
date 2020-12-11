@@ -1,7 +1,9 @@
 class AirbenderService
 
   def self.nation_members(nation)
-    nation_response = conn.get("api/v1/characters/?affiliation=nation")
+    nation_response = conn.get('api/v1/characters') do |req|
+      req.params["affiliation"] = nation
+    end
     parse_it(nation_response)
   end
 
@@ -15,3 +17,5 @@ class AirbenderService
     JSON.parse(data.body, symbolize_names: true)
   end
 end
+
+# 'api/v1/characters/?affiliation=nation'
