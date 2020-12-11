@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe 'Airbender service' do 
   it 'will return nation member data' do 
-    response = AirbenderService.nation_members('fire+nation')
-
+    response = AirbenderService.nation_members('fire nation')
+    
     expect(response).to be_an(Array)
     expect(response[0]).to be_a(Hash)
 
