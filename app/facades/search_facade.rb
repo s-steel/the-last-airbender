@@ -7,3 +7,5 @@ class SearchFacade
     end
   end
 end
+
+# I need a facade test!!!!

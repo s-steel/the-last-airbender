@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'As a user' do
   describe 'I select Fire Nations and click search for members' do
-    it 'I see the results on the page' do 
+    it 'I see the results on the page' do
       visit root_path
       select 'Fire Nation', from: :nation
       click_button 'Search For Members'
@@ -12,23 +12,26 @@ describe 'As a user' do
       within(first('.member')) do
 
         expect(page).to have_css('.name')
-        breed = find('.name').text
-        expect(breed).to_not be_empty
+        name = find('.name').text
+        expect(name).to_not be_empty
 
         expect(page).to have_css('.image')
         
         expect(page).to have_css('.allies')
-        breed = find('.allies').text
-        expect(breed).to_not be_empty
+        allies = find('.allies').text
+        expect(allies).to_not be_empty
 
         expect(page).to have_css('.enemies')
-        breed = find('.enemies').text
-        expect(breed).to_not be_empty
+        enemies = find('.enemies').text
+        expect(enemies).to_not be_empty
 
         expect(page).to have_css('.affiliation')
-        breed = find('.affiliation').text
-        expect(breed).to_not be_empty
+        alliliation = find('.affiliation').text
+        expect(alliliation).to_not be_empty
       end
     end
   end
 end
+
+# if they have or don't have allies what do we see?
+# testing around an image and if it shows up

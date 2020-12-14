@@ -14,7 +14,11 @@ describe 'Airbender service' do
 
     expect(response[0][:name]).to be_a(String)
     expect(response[0][:allies]).to be_a(Array)
+    # expect(response[0][:allies][0]).to be_a(String)
     expect(response[0][:enemies]).to be_a(Array)
     expect(response[0][:affiliation]).to be_a(String)
   end
 end
+
+# could have dove deeper to add that the first element of the array is a string
+# make response[0] a variable to reduce typing.

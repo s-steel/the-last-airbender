@@ -17,3 +17,7 @@ describe 'airbender PORO' do
     expect(airbender.affiliation).to eq(airbender_data[:affiliation])
   end
 end
+
+# should have added more elements to the arrays to test them
+# Should test that if an enemy or ally is an empty string (' '), or if they had no allies
+# test to make sure these extra things are not showing up.

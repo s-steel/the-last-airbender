@@ -12,3 +12,5 @@ class Character
     @affiliation = data[:affiliation]
   end
 end
+
+# need to add a check in here if there are no allies or enemies
